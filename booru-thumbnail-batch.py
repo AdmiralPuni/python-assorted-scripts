@@ -4,17 +4,21 @@ import requests
 import os
 from bs4 import BeautifulSoup
 from tqdm import tqdm
+import certifi
 
 pid = 0
 approx_images = 0
 download_folder = input('Download folder  : ')
 
-if not os.path.exists('btb/output/' + download_folder):
-    os.makedirs('btb/output/' + download_folder)
+if not os.path.exists('btb/output/myusu/train/' + download_folder):
+    os.makedirs('btb/output/myusu/train/' + download_folder)
 
-download_folder = 'btb/output/' + download_folder
-site = input('URL              : ')
+download_folder = 'btb/output/myusu/train/' + download_folder
+site = input('Site           : ')
+
 pages = int(input('Pages            : '))
+
+print(site)
 
 print('========================================')
 approx_images = 42*pages
